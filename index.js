@@ -12,11 +12,11 @@ app.get('/', function (req, res) {
   res.sendFile(process.cwd() + '/views/index.html');
 });
 
-app.post('/api/fileanalyse',upload.single('upfile'),(req,res)=>{
+app.post('/api/fileanalyse', upload.single('upfile') ,(req,res)=>{
   res.json({
-    name: req.file.originalname,
-    type: req.file.mimetype,
-    size: req.file.size
+    "name": req.file.originalname,
+    "type": req.file.mimetype,
+    "size": req.file.size
 });
 });
 
